@@ -1,0 +1,22 @@
+{
+  "name": "mhw-builds",
+  "version": "0.1.0",
+  "description": "A web app for Monster Hunter: World builds.",
+  "main": "dist/index.html",
+  "author": "Cyle Ven Dawson <dawsonc623@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "parcel build src/ui/index.html",
+    "watch": "parcel -p 8080 watch src/ui/index.html"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.9.0",
+    "eslint-plugin-import": "^2.22.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.11",
+    "typescript": "^4.0.3"
+  }
+}
