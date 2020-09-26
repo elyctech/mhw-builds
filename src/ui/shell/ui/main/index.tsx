@@ -22,14 +22,14 @@ import {
 
 import "@rmwc/top-app-bar/styles";
 
+import {
+  BuildsView
+} from "../../../views/builds";
+
 export default function ShellMain() : ReactElement
 {
-  const renderHome  = ()  : ReactElement =>
-  {
-    return (
-      <p>Hello, React, Parcel, and Material Design!</p>
-    );
-  };
+  const renderHome    = ()  => <p>Hello, Hunters!</p>;
+  const renderBuilds  = ()  => <BuildsView />;
 
   return (
     <div
@@ -59,6 +59,11 @@ export default function ShellMain() : ReactElement
               exact   = {true}
               path    = "/"
               render  = {renderHome}
+            />
+            <Route
+              exact   = {true}
+              path    = "/builds"
+              render  = {renderBuilds}
             />
           </Switch>
         </BrowserRouter>
