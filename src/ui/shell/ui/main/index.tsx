@@ -20,16 +20,16 @@ import {
   TopAppBarTitle
 } from "@rmwc/top-app-bar";
 
-import "@rmwc/top-app-bar/styles";
-
 import {
-  BuildsView
-} from "../../../views/builds";
+  LoadoutsView as LoadoutsView
+} from "../../../views/loadouts";
+
+import "@rmwc/top-app-bar/styles";
 
 export default function ShellMain() : ReactElement
 {
   const renderHome    = ()  => <p>Hello, Hunters!</p>;
-  const renderBuilds  = ()  => <BuildsView />;
+  const renderLoadouts  = ()  => <LoadoutsView />;
 
   return (
     <div
@@ -48,7 +48,7 @@ export default function ShellMain() : ReactElement
         <TopAppBar>
           <TopAppBarRow>
             <TopAppBarSection>
-              <TopAppBarTitle>MHW Builds</TopAppBarTitle>
+              <TopAppBarTitle>MHW Loadouts</TopAppBarTitle>
             </TopAppBarSection>
           </TopAppBarRow>
         </TopAppBar>
@@ -62,8 +62,8 @@ export default function ShellMain() : ReactElement
             />
             <Route
               exact   = {true}
-              path    = "/builds"
-              render  = {renderBuilds}
+              path    = "/loadouts"
+              render  = {renderLoadouts}
             />
           </Switch>
         </BrowserRouter>

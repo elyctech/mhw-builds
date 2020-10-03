@@ -1,7 +1,7 @@
 {
-  "name": "mhw-builds",
+  "name": "mhw-loadouts-viewer",
   "version": "0.1.0",
-  "description": "A web app for Monster Hunter: World builds.",
+  "description": "A web app for Monster Hunter: World loadouts.",
   "main": "dist/index.html",
   "author": "Cyle Ven Dawson <dawsonc623@gmail.com>",
   "license": "MIT",
