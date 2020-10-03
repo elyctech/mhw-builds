@@ -1,4 +1,34 @@
 div.mhwLoadoutRow
 {
-  background-color  : #444;
+  div.loadoutTitle
+  {
+    padding-left  : 4px;
+  }
+
+  table
+  {
+    border-collapse : collapse;
+    width           : 100%;
+
+    td
+    {
+      border  : 1px solid #333;
+      padding : 4px;
+
+      &:first-child
+      {
+        border-left : none;
+      }
+
+      &:last-child
+      {
+        border-right  : none;
+      }
+
+      span.loadoutStatValue
+      {
+        float : right;
+      }
+    }
+  }
 }

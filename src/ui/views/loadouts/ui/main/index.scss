@@ -1,0 +1,18 @@
+div.loadoutsViewMain
+{
+  background-color  : #444;
+  border-top        : 1px solid #333;
+
+  @media screen and (
+    min-width : 1024px
+  ) {
+    margin  : 0 auto;
+    width   : 60%;
+  }
+
+  div.loadoutsViewMainTitle
+  {
+    border-bottom : 1px solid #333;
+    padding       : 8px;
+  }
+}

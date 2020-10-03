@@ -3,10 +3,17 @@ import React, {
 } from "react";
 
 import {
+  Typography
+} from "@rmwc/typography";
+
+import {
   LoadoutRow
 } from "../../../../components/loadout-row";
 
 import LoadoutService from "../../../../../lib/loadout/service/index.type";
+
+import "@rmwc/typography/styles";
+import "./index.scss";
 
 interface LoadoutsViewMainProps
 {
@@ -20,18 +27,31 @@ export default function LoadoutsViewMain(
   const loadouts  = props.loadoutService.getAllLoadouts();
 
   return (
-    <>
-      {
-        loadouts.map(
-          (loadout) : ReactElement =>
-          {
-            return <LoadoutRow
-              key   = {loadout.name}
-              name  = {loadout.name}
-            />;
-          }
-        )
-      }
-    </>
+    <div
+      className = "loadoutsViewMain"
+    >
+      <div
+        className = "loadoutsViewMainTitle"
+      >
+        <Typography
+          use = "headline4"
+        >
+          Loadouts
+        </Typography>
+      </div>
+      <div>
+        {
+          loadouts.map(
+            (loadout) : ReactElement =>
+            {
+              return <LoadoutRow
+                key   = {loadout.name}
+                name  = {loadout.name}
+              />;
+            }
+          )
+        }
+      </div>
+    </div>
   );
 }
