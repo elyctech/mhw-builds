@@ -11,7 +11,27 @@ import "./index.scss";
 
 interface LoadoutRowMainProps
 {
+  // Meta-data
   name  : string;
+
+  // Stats
+  affinity  : number
+  attack    : number;
+  defense   : number;
+  health    : number;
+  stamina   : number;
+
+  dragonResistance  : number;
+  fireResistance    : number;
+  iceResistance     : number;
+  thunderResistance : number;
+  waterResistance   : number;
+
+  elementName   : string;
+  elementAttack : number;
+
+  sharpnessColor  : string;
+  sharpnessHits   : number;
 }
 
 export default function LoadoutRowMain(
@@ -19,7 +39,21 @@ export default function LoadoutRowMain(
 ) : ReactElement
 {
   const {
-    name
+    affinity,
+    attack,
+    defense,
+    dragonResistance,
+    elementAttack,
+    elementName,
+    fireResistance,
+    health,
+    iceResistance,
+    name,
+    sharpnessColor,
+    sharpnessHits,
+    stamina,
+    thunderResistance,
+    waterResistance
   } = props;
 
   return (
@@ -49,7 +83,7 @@ export default function LoadoutRowMain(
                 className = "loadoutStatValue"
                 use       = "body2"
               >
-                100
+                {health}
               </Typography>
             </td>
             {/* Stamina */}
@@ -62,7 +96,7 @@ export default function LoadoutRowMain(
               <span
                 className = "loadoutStatValue"
               >
-                100
+                {stamina}
               </span>
             </td>
             {/* Attack */}
@@ -75,7 +109,7 @@ export default function LoadoutRowMain(
               <span
                 className = "loadoutStatValue"
               >
-                1234
+                {attack}
               </span>
             </td>
             {/* Sharpness */}
@@ -88,7 +122,7 @@ export default function LoadoutRowMain(
               <span
                 className = "loadoutStatValue"
               >
-                10 Purple
+                {sharpnessHits} {sharpnessColor}
               </span>
             </td>
             {/* Affinity */}
@@ -101,7 +135,7 @@ export default function LoadoutRowMain(
               <span
                 className = "loadoutStatValue"
               >
-                60
+                {affinity}
               </span>
             </td>
             {/* Element */}
@@ -109,12 +143,93 @@ export default function LoadoutRowMain(
               <span
                 className = "loadoutStatTitle"
               >
-                Blast
+                {elementName}
               </span>
               <span
                 className = "loadoutStatValue"
               >
-                240
+                {elementAttack}
+              </span>
+            </td>
+          </tr>
+          <tr>
+            {/* Defense */}
+            <td>
+              <Typography
+                use = "body2"
+              >
+                Defense
+              </Typography>
+              <Typography
+                className = "loadoutStatValue"
+                use       = "body2"
+              >
+                {defense}
+              </Typography>
+            </td>
+            {/* Fire */}
+            <td>
+              <span
+                className = "loadoutStatTitle"
+              >
+                Fire
+              </span>
+              <span
+                className = "loadoutStatValue"
+              >
+                {fireResistance}
+              </span>
+            </td>
+            {/* Water */}
+            <td>
+              <span
+                className = "loadoutStatTitle"
+              >
+                Water
+              </span>
+              <span
+                className = "loadoutStatValue"
+              >
+                {waterResistance}
+              </span>
+            </td>
+            {/* Thunder */}
+            <td>
+              <span
+                className = "loadoutStatTitle"
+              >
+                Thunder
+              </span>
+              <span
+                className = "loadoutStatValue"
+              >
+                {thunderResistance}
+              </span>
+            </td>
+            {/* Ice */}
+            <td>
+              <span
+                className = "loadoutStatTitle"
+              >
+                Ice
+              </span>
+              <span
+                className = "loadoutStatValue"
+              >
+                {iceResistance}
+              </span>
+            </td>
+            {/* Dragon */}
+            <td>
+              <span
+                className = "loadoutStatTitle"
+              >
+                Dragon
+              </span>
+              <span
+                className = "loadoutStatValue"
+              >
+                {dragonResistance}
               </span>
             </td>
           </tr>

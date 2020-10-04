@@ -45,8 +45,22 @@ export default function LoadoutsViewMain(
             (loadout) : ReactElement =>
             {
               return <LoadoutRow
-                key   = {loadout.name}
-                name  = {loadout.name}
+                affinity          = {loadout.affinity}
+                attack            = {loadout.attack}
+                defense           = {loadout.defense}
+                dragonResistance  = {loadout.dragonResistance}
+                elementAttack     = {loadout.element.attack}
+                elementName       = {loadout.element.name}
+                fireResistance    = {loadout.fireResistance}
+                health            = {loadout.health}
+                iceResistance     = {loadout.iceResistance}
+                key               = {loadout.id}
+                name              = {loadout.name}
+                sharpnessColor    = {loadout.sharpness.color}
+                sharpnessHits     = {loadout.sharpness.hits}
+                stamina           = {loadout.stamina}
+                thunderResistance = {loadout.thunderResistance}
+                waterResistance   = {loadout.waterResistance}
               />;
             }
           )
